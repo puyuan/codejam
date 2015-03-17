@@ -1,0 +1,1 @@
+substring.d: ../substring.c
