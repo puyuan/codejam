@@ -7,15 +7,15 @@
 
 #include <string.h>
 #include <stdio.h>
-int countSubString(char * str, int max) {
-	int numZeros = 0;
-	int numOnes = 0;
+long countSubString(char * str, long max) {
+	long numZeros = 0;
+	long numOnes = 0;
 	char *end = str;
 	char *start=str;
-	int curCount=0;
-	int total=0;
+	long curCount=0;
+	long total=0;
 
-	for( ;*start!='\0'; start++){
+	for( ;start<=end && *start!='\0'; start++){
 
 		for( ;numZeros < max && numOnes < max && *end!='\0'; end++){
 			if (*end == '0')
@@ -23,11 +23,11 @@ int countSubString(char * str, int max) {
 			if (*end == '1')
 				numOnes++;
 			curCount++;
-		//	printf("%.*s\n",(int)(end-start+1),  start);
+		//	prlongf("%.*s\n",(long)(end-start+1),  start);
 		}
 
 		total += curCount;
-	//	printf("cur count: %d, total: %d\n", curCount, total);
+	//	prlongf("cur count: %d, total: %d\n", curCount, total);
 		if (*start == '0')
 			numZeros--;
 		if (*start == '1')
@@ -45,24 +45,27 @@ int countSubString(char * str, int max) {
 void readfile(){
 
     int numProblems, strLength, max, numSubProblems;
-    scanf("%d\n", &numProblems);
+    scanf("%d", &numProblems);
+    getchar();
     int problemNum;
     for(problemNum=1; problemNum<=numProblems; problemNum++){
 
-        scanf("%d %d %d\n", &strLength, &max, &numSubProblems);
+        scanf("%d %d %d", &strLength, &max, &numSubProblems);
+        getchar();
         char str[strLength+1];
         fgets(str, strLength+1, stdin);
         str[strLength]='\0';
         int subProblemi;
         for (subProblemi=1; subProblemi<=numSubProblems; subProblemi++){
-        	int start, end;
-        	 scanf("%d %d\n", &start, &end );
-        	int length=end-start+1;
+        	long start, end;
+        	 scanf("%ld %ld", &start, &end );
+        	 getchar();
+        	long length=end-start+1;
         	char substring[length+1];
         	strncpy(substring, str+start-1, length);
         	substring[length]='\0';
-        	int total=countSubString(substring, max);
-        	printf("%d\n", total);
+        	long total=countSubString(substring, max);
+        	printf("%ld\n", total);
 
         }
 
