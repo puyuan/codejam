@@ -79,8 +79,11 @@ void readfile(){
 
 
 int main() {
-	readfile();
+	//readfile();
+	int total=countSubString("01", 0);
+	printf("%d\n", total);
 	return 0;
+
 
 }
 

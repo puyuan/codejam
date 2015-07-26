@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
+<<<<<<< Updated upstream
 	<configuration id="cdt.managedbuild.toolchain.gnu.cross.base.1560032655" name="Debug">
+=======
+	<configuration id="cdt.managedbuild.toolchain.gnu.cross.base.584698957" name="Debug">
+>>>>>>> Stashed changes
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider copy-of="extension" id="org.eclipse.cdt.ui.UserLanguageSettingsProvider"/>
 			<provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
