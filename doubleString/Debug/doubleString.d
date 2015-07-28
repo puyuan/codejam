@@ -1,0 +1,1 @@
+doubleString.d: ../doubleString.c
