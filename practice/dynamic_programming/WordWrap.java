@@ -2,10 +2,7 @@ import java.io.*;
 import java.util.*;
 
 /*
- * To execute Java, please define "static void main" on a class
- * named Solution.
- *
- * If you need more classes, simply define them inline.
+ word wrap problems,  split line so that endings spaces are evenly distributed
  */
 
 class Solution {
