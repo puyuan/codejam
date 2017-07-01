@@ -18,29 +18,21 @@ class Solution {
   }
   
   public static void mergeSort(int [] arr, int min, int high){
-    
-    
-    
     int mid=(min+high)/2;
     System.out.println(Arrays.toString(arr));
     System.out.println("Min: "+ min+" mid: "+mid+ " high: "+high );
-    
     if(min==high)
       return;
-    
     mergeSort(arr, min, mid);
     mergeSort(arr, mid+1, high);
     System.out.println("Merging: ");
-    
     mergeStep(arr, min, mid, high);    
     System.out.println("Min: "+ min+" mid: "+mid+ " high: "+high );
     System.out.println(Arrays.toString(arr));
-    
   }
   
   
   public static void mergeStep(int [] arr, int min, int mid, int high){
-    
     int i=min;
     int j=mid+1;
     int k=0;
